@@ -5,12 +5,13 @@
     <groupId>com.wusuiwei</groupId>
     <artifactId>work-hack</artifactId>
     <packaging>pom</packaging>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>work-hack</name>
     <description>work-hack</description>
     <modules>
         <module>mybatis-generator</module>
         <module>jmeter-plugins</module>
+        <module>java-code-diff</module>
     </modules>
     <properties>
         <java.version>17</java.version>

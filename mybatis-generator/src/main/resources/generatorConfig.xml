@@ -34,7 +34,7 @@
 
 
         <!-- 以下配置model生成位置 -->
-        <javaModelGenerator targetPackage="generate.entity"
+        <javaModelGenerator targetPackage="com.wusuiwei.stock.entity"
                             targetProject="mybatis-generator/src/main/java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
@@ -48,7 +48,7 @@
 
         <!-- 配置mapper接口生成位置 -->
         <javaClientGenerator type="XMLMAPPER"
-                             targetPackage="generate.mapper"
+                             targetPackage="com.wusuiwei.stock.mapper"
                              targetProject="mybatis-generator/src/main/java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>

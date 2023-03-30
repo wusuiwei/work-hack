@@ -1,0 +1,11 @@
+
+git:
+  # git 使用 ssh key 获取代码
+  sshKey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDH9ASYpN2R1+IZWO7em88gvFDmAFxZOZGb156cceTU45sW2c502cnZWQWmzHUi85TEdwKDKZC9UO69nTNoI4FxQdMQANq2Ltao5FRN3UELB3q4Ku/+DNNUGhHkyeLum3EPIT1xT/5/IxMhgVvsG8iEQsyJ6ABQBn/5RWtU21pLxOzsVouzNbEQrwb0TBXplwkwAhkusILG0/2az3r4p0JuhwJ0wOTv+i3e7gFzIF0CBiSMHgXcIpDGwb0AGSPgYjyLYpxa3h9H0EP21E5RwO1y4eHSAibYO37TYNH7I+1GWFDIll2DYOBRCbw8WdrvGN7gvzE4voTTtQyD17sJGUtr7edPdoHAk6CI9qY8lOpIH6RpHE7hpQ47w+cC476PD4iKMMX6qXuJdb6Foj1ZJoBlZB/mkezsI9GBxy77SnqhKuV1DLDzx24EVLJfx53ggUZEVB/8LdRuSQwdMX5wDNtH7DmtB92BvTbtkMUNFGsh5VRj4LXgzaum7Fus7N0kWc8= 1763721508@qq.com
+  # git 使用 username、password 获取代码
+  username: admin
+  password: 123456
+  baseDir: D:\code-diff
+server:
+  servlet:
+    context-path: /api

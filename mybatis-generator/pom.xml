@@ -4,7 +4,7 @@
     <parent>
         <groupId>com.wusuiwei</groupId>
         <artifactId>work-hack</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
     <artifactId>mybatis-generator</artifactId>
     <name>mybatis-generator</name>
@@ -47,7 +47,7 @@
                             <directory>${project.basedir}</directory>
                             <includes>
                                 <include>src/main/resources/mapper/**</include>
-                                <include>src/main/java/generate/**</include>
+                                <include>src/main/java/com/wusuiwei/stock/**</include>
                             </includes>
                             <followSymlinks>false</followSymlinks>
                         </fileset>
