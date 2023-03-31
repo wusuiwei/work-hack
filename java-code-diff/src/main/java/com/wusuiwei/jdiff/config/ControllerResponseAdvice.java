@@ -1,7 +1,6 @@
 package com.wusuiwei.jdiff.config;
 
 import com.alibaba.fastjson2.JSON;
-import com.alibaba.fastjson2.JSONObject;
 import com.wusuiwei.jdiff.commons.BusinessException;
 import com.wusuiwei.jdiff.commons.BusinessExceptionEnum;
 import com.wusuiwei.jdiff.commons.ResultObject;
