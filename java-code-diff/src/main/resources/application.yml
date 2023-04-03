@@ -3,8 +3,8 @@ git:
   # git 使用 ssh key 获取代码
   sshKey: ~/.ssh/id_rsa.pub
   # git 使用 username、password 获取代码
-  username: admin
-  password: 123456
+  username: 1763721508@qq.com
+  password: Wsw@123456
   baseDir: D:\code-diff
 server:
   servlet:

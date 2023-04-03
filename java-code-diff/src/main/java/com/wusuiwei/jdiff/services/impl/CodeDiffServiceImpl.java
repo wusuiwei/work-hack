@@ -8,6 +8,7 @@ import com.wusuiwei.jdiff.entities.*;
 import com.wusuiwei.jdiff.services.CodeDiffService;
 import com.wusuiwei.jdiff.utils.GitUtil;
 import com.wusuiwei.jdiff.utils.MethodParserUtils;
+import com.wusuiwei.jdiff.utils.MyBeanUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
@@ -21,6 +22,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
+import org.springframework.util.ObjectUtils;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -73,7 +75,7 @@ public class CodeDiffServiceImpl implements CodeDiffService {
             //获取差异代码
             List<DiffEntry> diff = nowGit.diff().setOldTree(baseTree).setNewTree(nowTree).setShowNameAndStatusOnly(true).call();
             //过滤出有效的差异代码
-            Collection<DiffEntry> validDiffList = diff.stream()
+            List<DiffEntry> validDiffList = diff.stream()
                     //只计算java文件
                     .filter(e -> e.getNewPath().endsWith(".java"))
                     //排除测试文件
@@ -89,10 +91,7 @@ public class CodeDiffServiceImpl implements CodeDiffService {
 
             log.info("需要对比的差异类数：", validDiffList.size());
             log.info("需要对比的差异类为：", validDiffList);
-//        validDiffList.stream().map(o -> getClassMethod(getLocalNewPath()))
-            List<DiffEntryDto> diffEntryDtos = new ArrayList<>();
-            BeanUtils.copyProperties(validDiffList, diffEntryDtos);
-
+            List<DiffEntryDto> diffEntryDtos = MyBeanUtils.copyList(validDiffList, DiffEntryDto.class);
 
             Map<String, DiffEntryDto> diffMap = diffEntryDtos.stream().collect(Collectors.toMap(DiffEntryDto::getNewPath, Function.identity()));
             log.info("需要比对的差异类为：", JSON.toJSON(diffEntryDtos));
@@ -125,6 +124,7 @@ public class CodeDiffServiceImpl implements CodeDiffService {
             }
             List<ClassInfoDTO> list = diffEntryDtos.stream()
                     .map(item -> getClassMethods(getLocalNewPath(item.getNewPath()), getLocalOldPath(item.getNewPath()), item))
+                    .filter(o->!ObjectUtils.isEmpty(o))
                     .collect(Collectors.toList());
             if (!CollectionUtils.isEmpty(list)) {
                 log.info("计算出最终差异类数", list.size());
@@ -186,7 +186,7 @@ public class CodeDiffServiceImpl implements CodeDiffService {
     ;
 
     private String getClassFilePath(String localBasePath, String filePackage) {
-        StringBuilder builder = new StringBuilder(gitConfig.getBaseDir());
+        StringBuilder builder = new StringBuilder(localBasePath);
         builder.append("/");
         builder.append(filePackage);
         return builder.toString();
