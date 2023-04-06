@@ -1,4 +1,3 @@
-
 git:
   # git 使用 ssh key 获取代码
   sshKey: ~/.ssh/id_rsa.pub
