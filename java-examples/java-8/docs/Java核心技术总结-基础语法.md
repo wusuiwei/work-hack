@@ -83,7 +83,7 @@ eg: 9<<2=36
 语法规则；**条件表达式？表达式1：表达式2**，如果条件表达式结果为true，则执行表达式1，负责执行表达式2。
 ## 程序流程控制
 ### 条件语句
-* if语句
+* if 条件语句
 ```
 int a = 10;
 if(a > 10){
@@ -101,9 +101,108 @@ if(a >= b){
     System.out.println("a < b");
 }
 ```
-if...else if 多条件语句
+* if...else if 多条件语句
 ```
-
+int x = 40;
+if(x > 60) {
+  System.out.println("xጱ꧊य़ԭ60");
+} else if (x > 30) {
+  System.out.println("xጱ꧊य़ԭ30֕ੜԭ60");
+} else if (x > 0) {
+  System.out.println("xጱ꧊य़ԭ0֕ੜԭ30");
+} else {
+  System.out.println("xጱ꧊ੜԭᒵԭ0");
+}
+```
+* switch 多分支语句
+```
+switch (week) {
+  case 1:
+    System.out.println("Monday");
+    break;
+  case 2:
+    System.out.println("Tuesday");
+    break;
+  case 3:
+    System.out.println("Wednesday");
+    break;
+  case 4:
+    System.out.println("Thursday");
+  break;
+  case 5:
+    System.out.println("Friday");
+    break;
+  case 6:
+    System.out.println("Saturday");
+    break;
+  case 7:
+    System.out.println("Sunday");
+    break;
+  default:
+    System.out.println("No Else");
+    break;
+}
 ```
 ### 循环语句
+* for 循环
+
+语法规则：
+```
+for(初始化;条件表达式;步进器){
+   代码逻辑
+}
+```
+* for-each 循环
+JDK1.5版本引入了更加方便对集合、数组遍历的for-each方法。
+```
+int array[] = {7, 8, 9};
+for (int arr : array) {
+  System.out.println(arr);
+}
+```
+* while 循环
+
+语法规则：
+```
+while(布尔表达式){
+  代码逻辑
+}
+```
+* do...while 循环
+```
+int b = 10;
+// do···while循环
+do {
+  System.out.println("b == " + b);
+  b--;
+} while(b == 1);
+```
 ### 跳转语句
+* break 语句
+用法：在循环语句中，中断循环。
+```
+for(int i = 0;i < 10;i++){
+  if(i == 5){
+    break;
+  }
+}
+```
+* continue 语句
+用法：用在循环语句中，中断本次循环，进行下一次循环
+```
+for(int i = 0;i < 10;i++){
+  System.out.printl(" i = " + i );
+  if(i == 5){
+    System.out.printl("continue ... ");
+    continue;
+  }
+}
+```
+* return 语句
+用法：用在方法中，从一个方法返回，并将控制权交给调用它的语句。
+```
+public void getName() {
+  return name;
+}
+```
+
