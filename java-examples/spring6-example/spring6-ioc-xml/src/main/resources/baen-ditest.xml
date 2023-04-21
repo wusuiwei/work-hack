@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--
+    第一种方式：引入外部bean
+    1. 创建两个类对象：dept和emp
+    2. 在emp的bean标签中，使用property引入dept的bean-->
+    <bean name="dept" class="com.wusuiwei.java.spring6.ioc.xml.ditest.Dept">
+        <property name="danme" value="测试部"></property>
+    </bean>
+    <bean name="emp" class="com.wusuiwei.java.spring6.ioc.xml.ditest.Emp">
+        <!--普通属性注入-->
+        <property name="age" value="50"></property>
+        <property name="ename" value="50"></property>
+        <!--注入对象类型属性-->
+        <property name="dept" ref="dept"></property>
+    </bean>
+
+    <!--
+    第二种方式：内部bean
+    -->
+    <bean name="emp2" class="com.wusuiwei.java.spring6.ioc.xml.ditest.Emp">
+        <!--普通属性注入-->
+        <property name="age" value="50"></property>
+        <property name="ename" value="50"></property>
+        <!--注入对象类型属性-->
+        <property name="dept">
+            <bean name="dept" class="com.wusuiwei.java.spring6.ioc.xml.ditest.Dept">
+                <property name="danme" value="测试部"></property>
+            </bean>
+        </property>
+    </bean>
+
+    <!--
+    第三种方式：级联属性赋值
+    -->
+    <bean name="dept3" class="com.wusuiwei.java.spring6.ioc.xml.ditest.Dept">
+<!--        <property name="danme" value="测试部"></property>-->
+    </bean>
+    <bean name="emp3" class="com.wusuiwei.java.spring6.ioc.xml.ditest.Emp">
+        <!--普通属性注入-->
+        <property name="age" value="50"></property>
+        <property name="ename" value="50"></property>
+        <!--注入对象类型属性-->
+        <property name="dept" ref="dept3"/>
+        <property name="dept.danme" value="技术研发部"></property>
+    </bean>
+
+</beans>

@@ -15,38 +15,10 @@
         <module>java-examples</module>
         <module>java-examples/java-8</module>
         <module>java-examples/java-9-11</module>
-        <module>restful-api-automation</module>
+        <module>api-automation</module>
     </modules>
     <properties>
         <java.version>17</java.version>
-        <spring-cloud-dependencies.version>2022.0.1</spring-cloud-dependencies.version>
-        <spring-boot-dependencies.version>3.0.5</spring-boot-dependencies.version>
-
-        <mybatis-generator.version>1.4.2</mybatis-generator.version>
     </properties>
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud-dependencies.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>${spring-boot-dependencies.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
 
-            <!--Mybatis Generator-->
-            <dependency>
-                <groupId>org.mybatis.generator</groupId>
-                <artifactId>mybatis-generator-core</artifactId>
-                <version>${mybatis-generator.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 </project>

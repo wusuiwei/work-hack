@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--1. set方法注入-->
+    <bean id="book" class="com.wusuiwei.java.spring6.ioc.xml.di.Book">
+        <property name="bname" value="Vue开发"></property>
+        <property name="author" value="wsw"></property>
+        <property name="others">
+            <null></null>
+        </property>
+    </bean>
+
+    <!--2. 构造器生成-->
+    <bean id="book1" class="com.wusuiwei.java.spring6.ioc.xml.di.Book">
+        <constructor-arg name="bname" value="Vue开发1"/>
+        <constructor-arg name="author" value="wsw1"/>
+    </bean>
+
+</beans>

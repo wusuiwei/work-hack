@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--数组类型属性-->
+    <bean name="dept" class="com.wusuiwei.java.spring6.ioc.xml.ditest.Dept">
+        <property name="danme" value="测试部"></property>
+        <property name="empList">
+            <list>
+                <ref bean="emp"></ref>
+                <ref bean="emp1"></ref>
+            </list>
+        </property>
+    </bean>
+    <bean name="emp" class="com.wusuiwei.java.spring6.ioc.xml.ditest.Emp">
+        <!--普通属性注入-->
+        <property name="age" value="50"></property>
+        <property name="ename" value="hack"></property>
+    </bean>
+    <bean name="emp1" class="com.wusuiwei.java.spring6.ioc.xml.ditest.Emp">
+        <!--普通属性注入-->
+        <property name="age" value="50"></property>
+        <property name="ename" value="lucy"></property>
+    </bean>
+</beans>

@@ -1,6 +1,7 @@
 package com.wusuiwei.jdiff.services.impl;
 
 import com.alibaba.fastjson2.JSON;
+import com.wusuiwei.java.spring6.jdiff.entities.*;
 import com.wusuiwei.jdiff.commons.BusinessException;
 import com.wusuiwei.jdiff.commons.BusinessExceptionEnum;
 import com.wusuiwei.jdiff.config.GitConfig;
@@ -18,7 +19,6 @@ import org.eclipse.jgit.diff.Edit;
 import org.eclipse.jgit.diff.EditList;
 import org.eclipse.jgit.treewalk.AbstractTreeIterator;
 import org.eclipse.jgit.util.io.DisabledOutputStream;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
@@ -26,7 +26,6 @@ import org.springframework.util.ObjectUtils;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.Map;
 import java.util.function.Function;

@@ -3,17 +3,15 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.wusuiwei</groupId>
-        <artifactId>work-hack</artifactId>
+        <artifactId>spring6-example</artifactId>
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>java-examples</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>spring6-example</module>
-        <module>spring6-example/spring6-helloworld</module>
-        <module>spring6-example/spring6-ioc-xml</module>
-    </modules>
+    <artifactId>spring6-helloworld</artifactId>
+    <packaging>jar</packaging>
+
+    <name>spring6-helloworld</name>
+    <url>http://maven.apache.org</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
