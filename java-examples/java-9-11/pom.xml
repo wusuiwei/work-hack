@@ -5,7 +5,6 @@
         <groupId>com.wusuiwei</groupId>
         <artifactId>work-hack</artifactId>
         <version>1.0.0</version>
-        <relativePath>../../pom.xml</relativePath>
     </parent>
 
     <artifactId>java-9-11</artifactId>

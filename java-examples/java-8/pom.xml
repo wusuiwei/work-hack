@@ -3,9 +3,9 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.wusuiwei</groupId>
-        <artifactId>work-hack</artifactId>
+        <artifactId>java-examples</artifactId>
         <version>1.0.0</version>
-        <relativePath>../../pom.xml</relativePath>
+        <relativePath>../pom.xml</relativePath>
     </parent>
     <artifactId>java-8</artifactId>
     <packaging>jar</packaging>

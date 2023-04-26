@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--根据类型自动装配-->
+<!--    <bean class="com.wusuiwei.java.spring6.ioc.xml.auto.controller.UserController" id="userController" autowire="byType">-->
+
+<!--    </bean>-->
+
+<!--    <bean class="com.wusuiwei.java.spring6.ioc.xml.auto.service.UserServiceImpl" id="userservice" autowire="byType">-->
+
+<!--    </bean>-->
+
+<!--    <bean class="com.wusuiwei.java.spring6.ioc.xml.auto.dao.UserDaoImpl" id="userDao">-->
+
+<!--    </bean>-->
+
+    <!--根据名称自动装配-->
+
+    <bean class="com.wusuiwei.java.spring6.ioc.xml.auto.controller.UserController" id="userController" autowire="byName">
+
+    </bean>
+
+<!--    <bean class="com.wusuiwei.java.spring6.ioc.xml.auto.service.UserServiceImpl" id="userService" autowire="byName">-->
+
+<!--    </bean>-->
+
+    <bean class="com.wusuiwei.java.spring6.ioc.xml.auto.service.UserServiceImpl" id="userService" autowire="byName"></bean>
+
+    <bean class="com.wusuiwei.java.spring6.ioc.xml.auto.dao.UserDaoImpl" id="userDao"></bean>
+
+</beans>

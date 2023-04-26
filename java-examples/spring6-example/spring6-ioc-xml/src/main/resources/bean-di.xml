@@ -14,7 +14,7 @@
     </bean>
 
     <!--2. 构造器生成-->
-    <bean id="book1" class="com.wusuiwei.java.spring6.ioc.xml.di.Book">
+    <bean id="book1" class="com.wusuiwei.java.spring6.ioc.xml.di.Book" >
         <constructor-arg name="bname" value="Vue开发1"/>
         <constructor-arg name="author" value="wsw1"/>
     </bean>

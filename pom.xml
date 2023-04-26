@@ -13,8 +13,6 @@
         <module>jmeter-plugins</module>
         <module>java-code-diff</module>
         <module>java-examples</module>
-        <module>java-examples/java-8</module>
-        <module>java-examples/java-9-11</module>
         <module>api-automation</module>
     </modules>
     <properties>

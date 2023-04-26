@@ -10,7 +10,6 @@
 
     <!--2. 一个接口实现类的获取过程-->
     <bean id="userDao" class="com.wusuiwei.java.spring6.ioc.xml.bean.UserDaoImpl"></bean>
-    <bean id="personDao" class="com.wusuiwei.java.spring6.ioc.xml.bean.PersonDaoImpl"></bean>
-
+    <bean id="personDao" class="com.wusuiwei.java.spring6.ioc.xml.bean.PersonDaoImpl" ></bean>
 
 </beans>

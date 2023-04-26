@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--通过scope配置是单实例还是多实例-->
+    <bean id="order" class="com.wusuiwei.java.spring6.ioc.xml.scope.Order" scope="prototype">
+
+    </bean>
+</beans>

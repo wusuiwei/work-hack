@@ -11,8 +11,8 @@
     <packaging>pom</packaging>
     <modules>
         <module>spring6-example</module>
-        <module>spring6-example/spring6-helloworld</module>
-        <module>spring6-example/spring6-ioc-xml</module>
+        <module>java-8</module>
+        <module>java-9-11</module>
     </modules>
 
     <properties>

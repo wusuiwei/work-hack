@@ -12,6 +12,22 @@
 
     <name>spring6-example</name>
     <url>http://maven.apache.org</url>
+    <modules>
+        <!--入门程序-->
+        <module>spring6-helloworld</module>
+        <!--使用xml方式配置ioc-->
+        <module>spring6-ioc-xml</module>
+        <!--使用annotation方式配置ioc-->
+        <module>spring6-ioc-annotation</module>
+        <!--spring6-ioc 原理-->
+        <module>spring6-principle</module>
+        <!--spring aop原理-->
+        <module>spring6-aop</module>
+        <!--spring 与junit4 junit5集成-->
+        <module>spring6-junit</module>
+        <!--spring 事务-->
+        <module>spring6-jdbc-tx</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <!--p 命名空间注入-->
+    <bean id="studentP" class="com.wusuiwei.java.spring6.ioc.xml.dimap.Student" p:sid="100" p:sname="李华" p:lessonList-ref="lessonList" p:teacherMap-ref="teacherMap" />
+
+    <!--
+      1. 创建三个对象
+      2. 注入普通类属性
+      3. 使用标签utl:类型 定义
+      4. 在学生bena引入utl:类型 定义bean，完成list、map类型属性注入
+      -->
+    <bean id="lesson" class="com.wusuiwei.java.spring6.ioc.xml.dimap.Lesson">
+        <property name="lessonName" value="数学"></property>
+    </bean>
+    <bean id="student" class="com.wusuiwei.java.spring6.ioc.xml.dimap.Student">
+        <property name="sid" value="0001"></property>
+        <property name="sname" value="张三"></property>
+        <!--注入map、list-->
+        <property name="lessonList" ref="lessonList"></property>
+        <property name="teacherMap" ref="teacherMap"></property>
+
+    </bean>
+    <util:list id="lessonList">
+        <ref bean="lesson"></ref>
+    </util:list>
+    <util:map id="teacherMap">
+        <entry>
+            <key>
+                <value>10021</value>
+            </key>
+            <ref bean="teacher"></ref>
+        </entry>
+    </util:map>
+
+    <bean id="teacher" class="com.wusuiwei.java.spring6.ioc.xml.dimap.Teacher">
+        <property name="teacherId" value="100"></property>
+        <property name="teacherName" value="西门讲师"></property>
+    </bean>
+</beans>
